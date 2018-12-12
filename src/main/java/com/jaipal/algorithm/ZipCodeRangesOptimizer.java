@@ -25,8 +25,8 @@ public class ZipCodeRangesOptimizer {
 
 		// # sort the zipCodes list based on the lowerBound
 		zipCodes = zipCodes.stream().sorted(Comparator.<ZipCodeRange>comparingInt(ZipCodeRange::getLowerBound)).collect(Collectors.toList());
-
-		for(int i = 0; i < zipCodes.size() - 1; ) {
+		int i=0;
+		while(i < zipCodes.size() - 1){
 			// # adding 1 to the difference result because if the lowerBound of the next element is exactly one more than the upperBound of the current element
 			// example : input [(90119, 90199), (90200, 90299)] will output [(90119, 90299)]
 			Integer difference =  1 +  zipCodes.get(i).getUpperBound() - (zipCodes.get(i+1).getLowerBound());

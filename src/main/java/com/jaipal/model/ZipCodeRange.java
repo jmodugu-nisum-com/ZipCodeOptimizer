@@ -8,6 +8,7 @@ import com.jaipal.exception.InvalidZipCodeRangeException;
  * 
  * @author Jaipal Modugu
  */
+
 public class ZipCodeRange{
 	private Integer lowerBound;
 	private Integer upperBound;
